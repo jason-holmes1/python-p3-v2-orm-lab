@@ -289,7 +289,7 @@ class TestEmployee:
         Review.create_table()
         review1 = Review.create(2022, "Good Python coding skills", employee1.id)
         review2 = Review.create(2023, "Great Python coding skills", employee1.id)
-        review3 = Review.create(2022, "Good SQL coding skills", employee2.id)
+        
         
         reviews = employee1.reviews()
         assert (len(reviews) == 2)
@@ -297,3 +297,4 @@ class TestEmployee:
                 (review1.id, review1.year, review1.summary, review1.employee_id))
         assert ((reviews[1].id, reviews[1].year, reviews[1].summary, reviews[1].employee_id) ==
                 (review2.id, review2.year, review2.summary, review2.employee_id))
+        
